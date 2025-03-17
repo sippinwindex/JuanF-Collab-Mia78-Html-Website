@@ -1,3 +1,67 @@
-<!-- your html code here -->
-<!-- Also called a hero image or a jumbotron before bootstrap 5. This might be helpful: https://getbootstrap.com/docs/5.1/examples/jumbotron/ -->
-<p>Hello, I'm the tagline and I was loaded using ajax from templates/tagline.html</p>
+<style>
+    .jumbotron {
+      /* Reduced height by 25% */
+      height: 75vh;
+      min-height: 400px;
+      background-image: url('https://images.unsplash.com/photo-1522083165195-3424ed129620?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+    
+    /* Fallback background in case the image fails to load */
+    .jumbotron.image-fail {
+      background-color: #4b6cb7;
+      background-image: linear-gradient(to right, #4b6cb7 0%, #182848 100%);
+    }
+    
+    .glass-panel {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 5px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      width: 100vw;
+      padding: 20px 0;
+      margin-bottom: 15px;
+    }
+    
+    /* Padding container inside glass panel for text */
+    .glass-content {
+      padding: 0 20px;
+    }
+    
+    .display-1 {
+      font-weight: 700;
+      color: #000;
+    }
+    
+    .display-4 {
+      color: #000;
+    }
+    
+    .panel-gap {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="jumbotron jumbotron-fluid d-flex align-items-center justify-content-center">
+    <div class="text-center w-100">
+      <div class="glass-panel">
+        <div class="glass-content">
+          <h1 class="display-1">One Page Wonder</h1>
+        </div>
+      </div>
+      
+      <!-- Gap between panels (10px) -->
+      <div class="panel-gap"></div>
+      
+      <div class="glass-panel">
+        <div class="glass-content">
+          <h2 class="display-4">Will Knock Your Socks Off</h2>
+        </div>
+      </div>
+    </div>
+  </div>
